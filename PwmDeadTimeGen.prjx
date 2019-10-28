@@ -1,0 +1,431 @@
+KEY LIBERO "12.700"
+KEY CAPTURE "12.700.0.22"
+KEY DEFAULT_IMPORT_LOC ""
+KEY DEFAULT_OPEN_LOC ""
+KEY ProjectID "0"
+KEY HDLTechnology "VHDL"
+KEY VERILOGMODE "SYSTEMVERILOG"
+KEY VHDLMODE "VHDL2008"
+KEY UseConstraintFlowTechnology "TRUE"
+KEY VendorTechnology_Family "IGLOO2"
+KEY VendorTechnology_Die "PA4MGL500"
+KEY VendorTechnology_Package "tq144"
+KEY VendorTechnology_Speed "-1"
+KEY VendorTechnology_DieVoltage "1.2"
+KEY VendorTechnology_PART_RANGE "IND"
+KEY VendorTechnology_DSW_VCCA_VOLTAGE_RAMP_RATE "100_MS"
+KEY VendorTechnology_IO_DEFT_STD "LVCMOS33"
+KEY VendorTechnology_OPCONR ""
+KEY VendorTechnology_PLL_SUPPLY "PLL_SUPPLY_25"
+KEY VendorTechnology_RAD_EXPOSURE ""
+KEY VendorTechnology_RESERVEMIGRATIONPINS "1"
+KEY VendorTechnology_RESTRICTPROBEPINS "1"
+KEY VendorTechnology_RESTRICTSPIPINS "0"
+KEY VendorTechnology_SYSTEM_CONTROLLER_SUSPEND_MODE "0"
+KEY VendorTechnology_TARGETDEVICESFORMIGRATION "PA4MGL500"
+KEY VendorTechnology_TEMPR "IND"
+KEY VendorTechnology_UNUSED_MSS_IO_RESISTOR_PULL "None"
+KEY VendorTechnology_VCCI_1.2_VOLTR "COM"
+KEY VendorTechnology_VCCI_1.5_VOLTR "COM"
+KEY VendorTechnology_VCCI_1.8_VOLTR "COM"
+KEY VendorTechnology_VCCI_2.5_VOLTR "COM"
+KEY VendorTechnology_VCCI_3.3_VOLTR "COM"
+KEY VendorTechnology_VOLTR "IND"
+KEY ProjectLocation "C:\Microsemi\Libero_SoC_v12.2\Designer\user\Projects\Microsemiprj\PwmDeadTimeGen"
+KEY ProjectDescription ""
+KEY Pa4PeripheralNewSeq "GOOD"
+KEY SimulationType "VHDL"
+KEY Vendor "Actel"
+KEY ActiveRoot "SM_TopBot::work"
+LIST REVISIONS
+VALUE="Impl1",NUM=1
+CURREV=1
+ENDLIST
+LIST FileManager
+VALUE "<project>\designer\impl1\RedgeDetect.ide_des,ide_des"
+STATE="utd"
+TIME="1572010012"
+SIZE="243"
+ENDFILE
+VALUE "<project>\designer\impl1\SM_TopBot.ide_des,ide_des"
+STATE="utd"
+TIME="1572266770"
+SIZE="241"
+ENDFILE
+VALUE "<project>\hdl\counter.vhd,hdl"
+STATE="utd"
+TIME="1572269477"
+SIZE="3048"
+ENDFILE
+VALUE "<project>\hdl\fedgedetect.vhd,hdl"
+STATE="utd"
+TIME="1572012192"
+SIZE="1439"
+ENDFILE
+VALUE "<project>\hdl\redgedetect.vhd,hdl"
+STATE="utd"
+TIME="1572011060"
+SIZE="1496"
+ENDFILE
+VALUE "<project>\hdl\sm_topbot.vhd,hdl"
+STATE="utd"
+TIME="1572269176"
+SIZE="18431"
+ENDFILE
+VALUE "<project>\simulation\run.do,do"
+STATE="utd"
+TIME="1572016067"
+SIZE="903"
+ENDFILE
+VALUE "<project>\simulation\tb_counter_presynth_simulation.log,log"
+STATE="utd"
+TIME="1572270528"
+SIZE="68"
+ENDFILE
+VALUE "<project>\simulation\tb_redgedetect_presynth_simulation.log,log"
+STATE="utd"
+TIME="1572013892"
+SIZE="13076"
+ENDFILE
+VALUE "<project>\simulation\tb_sm_topbot_presynth_simulation.log,log"
+STATE="utd"
+TIME="1572269513"
+SIZE="8558"
+ENDFILE
+VALUE "<project>\simulation\wave.do,do"
+STATE="utd"
+TIME="1572019412"
+SIZE="2054"
+ENDFILE
+VALUE "<project>\stimulus\tb_counter.vhd,tb_hdl"
+STATE="utd"
+TIME="1572270747"
+SIZE="3086"
+ENDFILE
+VALUE "<project>\stimulus\tb_fedgedetect.vhd,tb_hdl"
+STATE="utd"
+TIME="1572011551"
+SIZE="2747"
+ENDFILE
+VALUE "<project>\stimulus\tb_redgedetect.vhd,tb_hdl"
+STATE="utd"
+TIME="1572009913"
+SIZE="2757"
+ENDFILE
+VALUE "<project>\stimulus\tb_sm_topbot.vhd,tb_hdl"
+STATE="utd"
+TIME="1572019740"
+SIZE="4014"
+ENDFILE
+ENDLIST
+LIST UsedFile
+ENDLIST
+LIST NewModulesInfo
+LIST "COUNTER::work"
+FILE "<project>\hdl\counter.vhd,hdl"
+LIST AssociatedStimulus
+VALUE "<project>\hdl\counter.vhd,hdl"
+VALUE "<project>\stimulus\tb_counter.vhd,tb_hdl"
+ENDLIST
+LIST ProjectState5.1
+LIST Impl1
+ideSTIMULUS=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+ENDLIST
+LIST "FedgeDetect::work"
+FILE "<project>\hdl\fedgedetect.vhd,hdl"
+LIST AssociatedStimulus
+VALUE "<project>\stimulus\tb_fedgedetect.vhd,tb_hdl"
+ENDLIST
+LIST ProjectState5.1
+LIST Impl1
+ideSTIMULUS=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+ENDLIST
+LIST "RedgeDetect::work"
+FILE "<project>\hdl\redgedetect.vhd,hdl"
+LIST AssociatedStimulus
+VALUE "<project>\stimulus\tb_redgedetect.vhd,tb_hdl"
+ENDLIST
+LIST ProjectState5.1
+LIST Impl1
+ideSTIMULUS=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+ENDLIST
+LIST "SM_TopBot::work"
+FILE "<project>\hdl\sm_topbot.vhd,hdl"
+LIST AssociatedStimulus
+VALUE "<project>\stimulus\tb_sm_topbot.vhd,tb_hdl"
+ENDLIST
+LIST ProjectState5.1
+LIST Impl1
+ideSTIMULUS=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+ENDLIST
+ENDLIST
+LIST AssociatedStimulus
+LIST SM_TopBot
+VALUE "<project>\stimulus\tb_sm_topbot.vhd,tb_hdl"
+ENDLIST
+LIST COUNTER
+VALUE "<project>\hdl\counter.vhd,hdl"
+VALUE "<project>\stimulus\tb_counter.vhd,tb_hdl"
+ENDLIST
+LIST FedgeDetect
+VALUE "<project>\stimulus\tb_fedgedetect.vhd,tb_hdl"
+ENDLIST
+LIST RedgeDetect
+VALUE "<project>\stimulus\tb_redgedetect.vhd,tb_hdl"
+ENDLIST
+ENDLIST
+LIST Other_Association
+ENDLIST
+LIST SimulationOptions
+UseAutomaticDoFile=true
+IncludeWaveDo=false
+Type=max
+RunTime=1000ns
+Resolution=1fs
+VsimOpt=
+EntityName=tb_counter
+TopInstanceName=<top>_0
+DoFileName=
+DoFileName2=wave.do
+DoFileParams=
+DisplayDUTWave=false
+LogAllSignals=false
+DisablePulseFiltering=false
+DumpVCD=false
+VCDFileName=power.vcd
+VHDL2008=false
+Verilog2001=false
+SystemVerilog=false
+TimeUnit=1
+TimeUnitBase=ns
+Precision=100
+PrecisionBase=ps
+ENDLIST
+LIST ModelSimLibPath
+UseCustomPath=FALSE
+LibraryPath=
+ENDLIST
+LIST GlobalFlowOptions
+GenerateHDLAfterSynthesis=FALSE
+GenerateHDLAfterPhySynthesis=FALSE
+RunDRCAfterSynthesis=FALSE
+AutoCheckConstraints=TRUE
+UpdateModelSimIni=TRUE
+NoIOMode=FALSE
+PeriInitStandalone=FALSE
+OnDemandBuildDH=TRUE
+EnableViewDraw=FALSE
+UpdateViewDrawIni=TRUE
+GenerateHDLFromSchematic=TRUE
+VmNetlistFlowOn=TRUE
+EnableDesignSeparationOn=FALSE
+EnableSETMitigationOn=FALSE
+DisplayFanoutLimit=10
+AbortFlowOnPDCErrorsOn=TRUE
+AbortFlowOnSDCErrorsOn=TRUE
+InstantiateInSmartDesign=TRUE
+FlashProInputFile=pdb
+SmartGenCompileReport=T
+ENDLIST
+LIST PhySynthesisOptions
+ENDLIST
+LIST Profiles
+NAME="SoftConsole"
+FUNCTION="SoftwareIDE"
+TOOL="SoftConsole"
+LOCATION="eclipse.exe"
+PARAM=""
+BATCH=0
+LICENSE=""
+IS32BIT="1"
+EndProfile
+NAME="Synplify Pro ME"
+FUNCTION="Synthesis"
+TOOL="Synplify Pro ME"
+LOCATION="C:\Microsemi\Libero_SoC_v12.2\SynplifyPro\bin\synplify_pro.exe"
+PARAM=""
+BATCH=0
+LICENSE=""
+IS32BIT="1"
+EndProfile
+NAME="ModelSim"
+FUNCTION="Simulation"
+TOOL="ModelSim"
+LOCATION="C:\Microsemi\Libero_SoC_v12.2\ModelSim\win32acoem\modelsim.exe"
+PARAM=" -l tb_counter_presynth_simulation.log "
+BATCH=0
+LICENSE=""
+IS32BIT="1"
+EndProfile
+NAME="Identify Debugger"
+FUNCTION="IdentifyDebugger"
+TOOL="Identify Debugger"
+LOCATION="C:\Microsemi\Libero_SoC_v12.2\Identify\bin\identify_debugger.exe"
+PARAM=""
+BATCH=0
+LICENSE=""
+IS32BIT="1"
+EndProfile
+ENDLIST
+LIST ProjectState5.1
+LIST "COUNTER::work"
+LIST Impl1
+ideSTIMULUS=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+LIST "FedgeDetect::work"
+LIST Impl1
+ideSTIMULUS=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+LIST "RedgeDetect::work"
+LIST Impl1
+ideSTIMULUS=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+LIST "SM_TopBot::work"
+LIST Impl1
+ideSTIMULUS=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+ENDLIST
+LIST ExcludePackageForSimulation
+ENDLIST
+LIST ExcludePackageForSynthesis
+ENDLIST
+LIST IncludeModuleForSimulation
+ENDLIST
+LIST CDBOrder
+ENDLIST
+LIST UserCustomizedFileList
+ENDLIST
+LIST OpenedFileList
+ORIENTATION;HORIZONTAL
+HDL;stimulus\tb_counter.vhd;0
+HDL;hdl\counter.vhd;0
+HDL;hdl\sm_topbot.vhd;0
+Reports;Reports;0
+ReportsCurrentItem;Pre-Synthesis Simulate:tb_sm_topbot_presynth_simulation.log
+HDL;stimulus\tb_sm_topbot.vhd;0
+HDL;hdl\fedgedetect.vhd;0
+StartPage;StartPage;0
+HDL;stimulus\tb_redgedetect.vhd;0
+HDL;stimulus\tb_fedgedetect.vhd;0
+HDL;simulation\wave.do;0
+HDL;simulation\run.do;0
+HDL;hdl\redgedetect.vhd;0
+ACTIVEVIEW;stimulus\tb_sm_topbot.vhd
+ENDLIST
+LIST ModuleSubBlockList
+LIST "COUNTER::work","hdl\counter.vhd","FALSE","FALSE"
+ENDLIST
+LIST "FedgeDetect::work","hdl\fedgedetect.vhd","FALSE","FALSE"
+ENDLIST
+LIST "RedgeDetect::work","hdl\redgedetect.vhd","FALSE","FALSE"
+ENDLIST
+LIST "SM_TopBot::work","hdl\sm_topbot.vhd","FALSE","FALSE"
+SUBBLOCK "COUNTER::work","hdl\counter.vhd","FALSE","FALSE"
+SUBBLOCK "FedgeDetect::work","hdl\fedgedetect.vhd","FALSE","FALSE"
+SUBBLOCK "RedgeDetect::work","hdl\redgedetect.vhd","FALSE","FALSE"
+ENDLIST
+LIST "COUNTER::work","hdl\counter.vhd","FALSE","FALSE"
+ENDLIST
+LIST "tb_counter::work","stimulus\tb_counter.vhd","FALSE","TRUE"
+SUBBLOCK "COUNTER::work","hdl\counter.vhd","FALSE","FALSE"
+ENDLIST
+LIST "tb_fedgedetect::work","stimulus\tb_fedgedetect.vhd","FALSE","TRUE"
+SUBBLOCK "FedgeDetect::work","hdl\fedgedetect.vhd","FALSE","FALSE"
+ENDLIST
+LIST "tb_redgedetect::work","stimulus\tb_redgedetect.vhd","FALSE","TRUE"
+SUBBLOCK "RedgeDetect::work","hdl\redgedetect.vhd","FALSE","FALSE"
+ENDLIST
+LIST "tb_sm_topbot::work","stimulus\tb_sm_topbot.vhd","FALSE","TRUE"
+SUBBLOCK "SM_TopBot::work","hdl\sm_topbot.vhd","FALSE","FALSE"
+ENDLIST
+ENDLIST
+LIST ActiveTestBenchList
+LIST "SM_TopBot::work"
+ACTIVETESTBENCH "tb_sm_topbot::work","stimulus\tb_sm_topbot.vhd","FALSE"
+ENDLIST
+LIST "COUNTER::work"
+ACTIVETESTBENCH "tb_counter::work","stimulus\tb_counter.vhd","FALSE"
+ENDLIST
+LIST "FedgeDetect::work"
+ACTIVETESTBENCH "tb_fedgedetect::work","stimulus\tb_fedgedetect.vhd","FALSE"
+ENDLIST
+LIST "RedgeDetect::work"
+ACTIVETESTBENCH "tb_redgedetect::work","stimulus\tb_redgedetect.vhd","FALSE"
+ENDLIST
+ENDLIST
+LIST IOTabList
+ENDLIST
+LIST FPTabList
+ENDLIST
+LIST TimingTabList
+ENDLIST
+LIST FDCTabList
+ENDLIST
