@@ -72,7 +72,7 @@ begin
 		nRST  	<= '0' ;	  	
 		wait for 1us;
 		nRST  	<= '1' ;	
-		wait for 10ms; 
+		wait ; 
 end process;
 
 with  SDA_dir select
@@ -126,28 +126,27 @@ begin
 		SDA_node <= '0';			-- messo a zero per produrre condizione di stop
 	end if;
 	
-	wait for (tSCL_H); 
-	SCL 	<= '0';
+	wait for tSCL_H; 
 					
 	if(ack = '1') then				-- genera condione di STOP su bus I2C	
-		wait for (tSCL_L);
+		wait for tSCL_L;
 		SCL <= '1';					-- Riporto alto la linea di clock SCL
 			
 		wait for tSU_STO;			-- evento di stop
 		SDA_node <= '1';
 	else
+   		SCL <= '0';					-- Riporto bassa la linea di clock SCL
+
 		for i in 0 to 7 loop				   			-- Invia dato da scrivere  
-			wait for ((tSCL/2)-tSU_DAT - tHD_DAT);  	--  Fisso dati sulla linea SDA   
+        	wait for (tSCL_L-tSU_DAT);
 			SDA_node <= WR_DATA(i);			
 			wait for (tSU_DAT); 
 			SCL <= '1'; 
-			wait for (tSCL/2);
+            wait for (tSCL_H); 
 			SCL <= '0';
-			wait for tHD_DAT;			   			--  Tempo di Hold linea dati risp. fronte di discesa SCL
-			SDA_node <= '1';					
 		end  loop; 
 						
-		wait for ((tSCL/2)-tHD_DAT );				-- Attende ACK da dispositivo I2C   			   
+		wait for tSCL_L;				-- Attende ACK da dispositivo I2C   			   
 		SCL <= '1';
 
 		if(SDA = '0') then
@@ -155,96 +154,84 @@ begin
 		else
 			ack := '1';					-- NOT Acknowledge
 		end if;
-	
-		wait for (tSCL/2); 
-		SCL <= '0';	
-			
+				
+     	wait for tSCL_H;
+		SCL	<= '0';
 		SDA_node <= '0';					
-			
-		wait for (tSCL/2);          	-- Genera STOP su bus I2C
-		SCL <= '1';					
-			
+		wait for tSCL_L;			
+		SCL <= '1';
 		wait for tSU_STO;
 		SDA_node <= '1';			
 	end if;	
-						
-	SCL			<= '1';
-	SDA_node	<= '1';		
-		
-	wait for 10 us;
-		
-	SDA_node	<= '0';						   	-- Genera condizione di START su I2C
+					
+	SCL <= '1';
+   	SDA_node <= '1';
+	   			
+	wait for 10 uS;
+ 
+    SDA_node	<= '0';						   	-- Genera condizione di START su I2C
 		
 	wait for tHD_STA;		  
-		
+
 	for i in 0 to 6 loop				   		-- Genera indirizzo dispositivo I2C  
 		SCL <= '0';	
-		wait for tHD_DAT;			   			--  Tempo di Hold linea dati risp. fronte di discesa SCL
-		SDA_node <= '1';
-		wait for ((tSCL/2)-tSU_DAT-tHD_DAT );   --  Fisso dati sulla linea SDA   
+		wait for (tSCL_L-tSU_DAT);				-- Tempo di attesa prima di trasmettere bit di indirizzo
 		SDA_node <= DEV_ADR(i);			
-		wait for (tSU_DAT); 
+		wait for tSU_DAT; 
 		SCL <= '1'; 
-		wait for (tSCL/2); 
+		wait for tSCL_H;                        -- Tempo in cui la linea di clock rimane alta   
 	end  loop;
-		
-	SCL <= '0';	
-	wait for tHD_DAT;			   				--  Tempo di Hold linea dati risp. fronte di discesa SCL
-	SDA_node <= '1';
-	wait for ((tSCL/2)-tSU_DAT-tHD_DAT );   	--  Fisso dati sulla linea SDA   
-	SDA_node <= READ;							--  Scrittura su bus I2C		
-	wait for (tSU_DAT); 
-	SCL <= '1'; 
-	wait for (tSCL/2); 
 
-	SDA_node <= '0';									
-	SCL <= '0';		
-	wait for tSCL/2;   			   
+	SCL <= '0';	
+	wait for (tSCL_L-tSU_DAT);				    -- Tempo di attesa prima di trasmettere bit di R/W
+	SDA_node <= READ;							--  Scrittura su bus I2C		
+	wait for tSU_DAT; 
+	SCL <= '1'; 
+	wait for tSCL_H; 
+    
+	SCL <= '0';		                            -- Clock pulse of ACK bit
+	wait for tSCL_L;   			   
 	SCL <= '1';
-		
+	        
 	if(SDA = '0') then
 		ack := '0';					-- Acknowledge OK 
 	else
 		ack := '1';					-- NOT Acknowledge
+		SDA_node <= '0';			-- messo a zero per produrre condizione di stop
 	end if;
-	
-	wait for (tSCL/2);
-
-	SDA_node 	<= '0';  	
-	SCL 		<= '0';
-					
+  
+    wait for tSCL_H; 
+  
 	if(ack = '1') then				-- genera condione di STOP su bus I2C	
-		wait for (tSCL/2);
+		wait for tSCL_L;
 		SCL <= '1';					-- Riporto alto la linea di clock SCL
 			
-		wait for tSU_STO;
-		SDA_node <= '1';  
-		wait for 1ms;
+		wait for tSU_STO;			-- evento di stop
+		SDA_node <= '1';
 	else
-		for i in 0 to 7 loop				   			-- Invia dato da scrivere  
-			wait for tSCL/2;  							--  Fisso dati sulla linea SDA 
+   		SCL <= '0';					-- Riporto bassa la linea di clock SCL    
+		for i in 0 to 7 loop				   	-- Invia dato da scrivere  
+            wait for tSCL_L;				    -- Tempo di attesa prima di trasmettere bit di indirizzo
 			SCL  <= '1';
 			READ_DATA(0 to 6) <= READ_DATA(1 to 7);
 			READ_DATA(7) <= SDA;
-			wait for (tSCL/2);
+			wait for tSCL_H;
 			SCL <= '0';
 		end  loop; 
 	
 		SDA_node	<= '0';				-- Fornisce ACK allo slave
-		
-		wait for (tSCL/2);				-- Attende ACK da dispositivo I2C   			   
+		SCL <= '0';		
+		wait for tSCL_L;				-- Attende ACK da dispositivo I2C   			   
 		SCL <= '1';
-
-		wait for (tSCL/2);				-- Attende ACK da dispositivo I2C   			   
+		wait for tSCL_H;				-- Attende ACK da dispositivo I2C   			   
 		SCL <= '0';
-
- 		wait for (tSCL/2);				-- Attende ACK da dispositivo I2C   			   
+		wait for tSCL_L;				-- Attende ACK da dispositivo I2C   			   
 		SCL <= '1';
-			
+		wait for tSCL_H;				-- Attende ACK da dispositivo I2C   			   
+        
 		wait for tSU_STO;
 		SDA_node <= '1';	
 	
-		wait for 1us;
 	end if;	
 		
 end process;		

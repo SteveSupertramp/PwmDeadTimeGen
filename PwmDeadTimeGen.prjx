@@ -42,6 +42,11 @@ VALUE="Impl1",NUM=1
 CURREV=1
 ENDLIST
 LIST FileManager
+VALUE "<project>\designer\impl1\i2c_slave.ide_des,ide_des"
+STATE="utd"
+TIME="1572438513"
+SIZE="241"
+ENDFILE
 VALUE "<project>\designer\impl1\RedgeDetect.ide_des,ide_des"
 STATE="utd"
 TIME="1572010012"
@@ -79,8 +84,8 @@ SIZE="18431"
 ENDFILE
 VALUE "<project>\simulation\run.do,do"
 STATE="utd"
-TIME="1572270632"
-SIZE="674"
+TIME="1572357531"
+SIZE="832"
 ENDFILE
 VALUE "<project>\simulation\tb_counter_presynth_simulation.log,log"
 STATE="utd"
@@ -89,8 +94,8 @@ SIZE="5648"
 ENDFILE
 VALUE "<project>\simulation\tb_i2c_slave_presynth_simulation.log,log"
 STATE="utd"
-TIME="1572359358"
-SIZE="5663"
+TIME="1572365975"
+SIZE="9747"
 ENDFILE
 VALUE "<project>\simulation\tb_redgedetect_presynth_simulation.log,log"
 STATE="utd"
@@ -104,8 +109,8 @@ SIZE="12021"
 ENDFILE
 VALUE "<project>\simulation\wave.do,do"
 STATE="utd"
-TIME="1572019412"
-SIZE="2054"
+TIME="1572357660"
+SIZE="1437"
 ENDFILE
 VALUE "<project>\stimulus\tb_counter.vhd,tb_hdl"
 STATE="utd"
@@ -119,8 +124,8 @@ SIZE="2747"
 ENDFILE
 VALUE "<project>\stimulus\tb_i2c_slave.vhd,tb_hdl"
 STATE="utd"
-TIME="1572364332"
-SIZE="6801"
+TIME="1572448658"
+SIZE="6561"
 ENDFILE
 VALUE "<project>\stimulus\tb_redgedetect.vhd,tb_hdl"
 STATE="utd"
@@ -413,24 +418,22 @@ LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
-HDL;stimulus\tb_counter.vhd;0
+HDL;C:\Progetti\gefran\aldec\pwm_deadtime\src\testbench\i2c_slave_tb.vhd;0
 HDL;stimulus\tb_i2c_slave.vhd;0
-HDL;hdl\redgedetect.vhd;0
-HDL;hdl\fedgedetect.vhd;0
 HDL;hdl\i2c_slave.vhd;0
-HDL;C:\Progetti\gefran\aldec\pwm_deadtime\src\i2c_slave.vhd;0
-HDL;C:\Progetti\gefran\aldec\pwm_deadtime\src\deadtime.vhd;0
-HDL;C:\Progetti\gefran\aldec\pwm_deadtime\src\top.vhd;0
-HDL;stimulus\tb_sm_topbot.vhd;0
-HDL;simulation\run.do;0
-HDL;simulation\wave.do;0
-HDL;stimulus\tb_fedgedetect.vhd;0
-HDL;stimulus\tb_redgedetect.vhd;0
-StartPage;StartPage;0
+HDL;hdl\sm_topbot.vhd;0
+HDL;hdl\counter.vhd;0
 Reports;Reports;0
 ReportsCurrentItem;Pre-Synthesis Simulate:tb_sm_topbot_presynth_simulation.log
-HDL;hdl\counter.vhd;0
-HDL;hdl\sm_topbot.vhd;0
+StartPage;StartPage;0
+HDL;stimulus\tb_redgedetect.vhd;0
+HDL;stimulus\tb_fedgedetect.vhd;0
+HDL;simulation\wave.do;0
+HDL;simulation\run.do;0
+HDL;stimulus\tb_sm_topbot.vhd;0
+HDL;stimulus\tb_counter.vhd;0
+HDL;hdl\redgedetect.vhd;0
+HDL;hdl\fedgedetect.vhd;0
 ACTIVEVIEW;stimulus\tb_i2c_slave.vhd
 ENDLIST
 LIST ModuleSubBlockList
